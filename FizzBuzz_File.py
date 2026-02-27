@@ -1,5 +1,15 @@
 import numpy as np
 
 def FizzBuzz(start, finish):
-    v = ['buzz', 41, 'fizz', 43, 44, 'fizzbuzz']
-    return(v)
+    n = np.arange(start, finish +1)
+    out = []
+
+    n3 = (n % 3 ==0)
+    n5 = (n % 5 ==0)
+
+    out[n3] = "fizz"
+    out[n5] = "buzz"
+    out[n3 & n5] = "fizzbuzz"
+    out[n] = n
+    
+    return(out)
